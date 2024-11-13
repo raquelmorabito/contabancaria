@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
+import conta.controller.ContaController;
 import conta.model.ContaCorrente;
 import conta.model.ContaPoupanca;
 import conta.util.Cores;
@@ -13,6 +14,8 @@ public class Menu {
 	public static Scanner leia = new Scanner(System.in);
 
 	public static void main(String[] args) {
+		
+		ContaController contas = new ContaController();
 
 		int opcao = 0;
 
@@ -78,7 +81,7 @@ public class Menu {
 				break;
 			case 2:
 				System.out.println("\n Listar todas as Contas");
-
+				contas.listarTodas();
 				keyPress();
 				break;
 			case 3:
